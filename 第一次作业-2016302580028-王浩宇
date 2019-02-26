@@ -1,0 +1,13 @@
+1.
+ 没有不同，本书中 host 和end system可以互用。end system包括PCs，linux workstation, web server, e-mail server,连接internet的PDA，WebTV等
+
+13.
+a. 两个用户
+b. 每个用户需要1Mbps进行传输，若两个或更少用户同时进行传输，则带宽需求量最大为2Mbps,由于链路总宽带为2Mbps,所以无排队时延；若三个或更多用户同时进行传输，带宽需求超过3Mbps，多于链路总宽带，因此会出现排队时延。
+c. 0.27
+d. 0.008 0.008
+
+19.
+a. 500kbps
+b. 64s
+c. 100kbps  320s
