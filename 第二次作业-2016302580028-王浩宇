@@ -1,0 +1,56 @@
+P4.
+a.  The URL is: http://gaia.cs.umass.edu/cs453/index.html 
+    Found in request header and the header line "Host:gaia.cs.umass.edu"
+b.  HTTP/1.1, found in header line
+c.  The brower request a persistent connection, found by header line "connection: keep-alive"
+d.  We can't get the ip address from the HTTP message.
+e.  Mozilla/5.0, This header line is useful because the server can actually send 
+different versions of the same object to different types of user agents
+
+P5.
+a.  The server can successfully find the document because status code is 200. The reply time is Tue, 07 Mar 2008 12:39:45GMT
+b.  Sat, 10 Dec2005 18:27:46 GMT, obtained by header "Last-Modified: Sat, 10 Dec2005 18:27:46 GMT"
+c.  3874 , obtained by header "Content-Length: 3874"
+d.  The first bytes are "<!doc" , the server agree to persistent connection, indicated by hearder "Connection: Keep-Alive"
+
+p6.
+a.  Either the client or the server can indicate to the other that it is going to close the persistent connection. It does so by
+including the connection-token "close" in the connection-header field of the http request/reply.
+b.  HTTP does not provide any encryption services.
+c.  Clients that use persistent connections should limit the number of simultaneous connections that they maintain to a given server.
+A single-user client SHOULD NOT maintain more than 2 connections with any server or proxy.
+d.  YES,A client might have started to send a new request at the same time that the server has decided to clode the "idle" connection.
+From the server's point of view, the connection is being closed while it was idle, but from the client's point of view, a request is in
+progress.
+
+P7.
+a)  C:dele 1
+    C:retr 2
+    S:(blah blah ...)
+    S:.
+    C:dele 2
+    C:quit
+    S:+OK POP3 server siging off
+    
+b)  C:retr 2
+    S:blah blah ...
+    S:.
+    C:quit
+    S:+OK POP3 server signing off
+    
+c)  C:list
+    S:1 498
+    S:2 912
+    S:.
+    C:retr 1
+    S:blah ...
+    S:.
+    C:retr 2
+    S:blah ...
+    S:.
+    C:quit
+    S:+OK POP3 server signing off
+    
+P21 YES,we can use dig to query that web site in the local DNS server. For example, "dig baidu.com" will return the 
+query time for finding baidu.com. If baidu.com was just accessed a couple of seconds age, an entry for baidu.com is cached in the 
+local DNS cache, so the query time is 0 msec. Otherwise, the query time is large.
