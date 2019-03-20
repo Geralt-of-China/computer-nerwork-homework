@@ -1,0 +1,24 @@
+p1.
+a) source port: 33000, dest port: 80
+b) source prot: 80, dest port:33000
+c) No
+d) Yes
+
+p2.
+Suppose the IP address of the hosts A,B and C are a,b,c respectively.
+To host A:Source port=80,source IP address = b,dest port =26145,dest IP address=a.
+To host C, left process source port=80,source IP address = b, dest port =7532, dest IP address=c.
+To host C, right process: source port=80,source IP address=b, dest port =26145, dest IP address=c.
+
+p3.
+01010011+01100110=10111001
+10111001+01110100=00101110
+1s complement is  11010001.
+To detec errors,the receiver adds the four words, if the sum contains a zero,the receiver knows there is 
+an error. All one-bit error can be detected,but two-bit error can not be detected.
+
+p5.
+NO, because the way checksum is used can only detect one-bit error,if two corresponding bits change from 
+1 and 0 to 0 and 1, the sum still remains the same. In this circumstance,the checksum verfity even there is
+an error.
+
