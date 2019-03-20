@@ -22,3 +22,15 @@ NO, because the way checksum is used can only detect one-bit error,if two corres
 1 and 0 to 0 and 1, the sum still remains the same. In this circumstance,the checksum verfity even there is
 an error.
 
+p51.
+a) Both C1 and C2 have the same window size 2 after 2200 mesec.
+b) Yes, this is due to the AIMD algorithm of TCP and that both connections have the same RTT.
+c) Yes,this can be seen clearly from the above table.Their max window size is 2.
+d) No, this synchronization won’t help to improve link utilization, as these two
+connections act as a single connection oscillating between min and max window size.
+Thus, the link is not fully utilized. One possible way to break the synchronization is to 
+add a finite buffer to the link and randomly drop packets in the buffer before buffer overflow. 
+This will cause different connections cut their window sizes at different times. 
+There are many AQM (Active Queue Management) techniques to do that, such as RED (Random Early Detect), 
+PI (Proportional and Integral AQM), AVQ (Adaptive Virtual Queue), and REM
+(Random Exponential Marking), etc.
