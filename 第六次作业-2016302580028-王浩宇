@@ -1,0 +1,34 @@
+1.
+  0 1 0 1 0
+  1 0 1 1 1 
+  0 0 1 0 1 
+  0 1 0 0 1
+  1 0 0 0 1 
+2. suppose we have a initial two-dimensional parity matrix
+  0 0 0 0
+  1 1 1 1 
+  0 1 0 1 
+  1 0 1 0
+  we have bit errors at row 2 column 2 and row 2 column three,so the matrix is 
+  0 0 0 0
+  1 0 0 1
+  0 1 0 1
+  1 0 1 0
+  Now we can detect that column 2 and column 3 are wrong, but we don't know which row, so we detect
+  error but we can't correct it .
+10.
+a) A's average throughput is given by pA(1=pB).Total efficency is pA(1-pB)+pB(1-pA)
+b) A's throughput is pA(1-pB)=2pB(1-pB)=2pB-2(pB)2.
+   B's throughput is pB(1-pA)=pB(1-2pB)=pB-2(pB)2.
+   Clearly,A's throughput is not twice as large as B's.
+   in order t omake pA(1-pB)=2pB(1-pA),we need that pA=2-(pA/pB)
+c) A's throughput is 2p(1-p)N-1,and any other node has throughput p(1-p)N-2(1-2p).
+17. 
+For 10Mbps, this wait is 
+51.2*10^3bits/(10*10^6)=5.12 msec
+For 100Mbps,the wait is 512 u sec.
+18.
+At t=0 A transmits. At t=576, A would finish transmitting. In the worst case, B begins transmitting at time t=324,
+which is the time right before the first bit of A's frame arrives at B. At time t=324+325=649 B's first bit arrives
+at A. Because 649>576, A finishes transmitting before it detects that B has  transmitted. So A incorrectly thinks
+that its frame was successfully transmitted without a collision.
